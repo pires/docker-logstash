@@ -17,7 +17,7 @@ docker pull pires/logstash
 
 ## Build images (optional)
 
-Providing your own version of the image automatically built for [Logstash](https://registry.hub.docker.com/u/pires/logstash) will not be supported. This is an *optional* step. You have been warned.
+Providing your own version of [the image automatically built for Logstash](https://registry.hub.docker.com/u/pires/logstash) will not be supported. This is an *optional* step. You have been warned.
 
 ### Clone repository
 
@@ -30,4 +30,4 @@ cd kubernetes-elasticsearch-cluster
 
 ```
 docker build -t pires/logstash:latest .
-``
+```
