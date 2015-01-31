@@ -24,8 +24,8 @@ Providing your own version of [the image automatically built for Logstash](https
 ### Clone repository
 
 ```
-git clone https://github.com/pires/kubernetes-elasticsearch-cluster.git
-cd kubernetes-elasticsearch-cluster
+git clone https://github.com/pires/logstash.git
+cd logstash
 ```
 
 ### Assemble container
