@@ -32,3 +32,5 @@ ADD certs/logstash-forwarder.key /logstash/certs/logstash-forwarder.key
 # runnable scripts
 ADD run-logstash.sh /etc/service/logstash/run
 RUN chmod u+x /etc/service/logstash/run
+
+CMD ["/usr/bin/runsvdir", "-P", "/etc/service"]
