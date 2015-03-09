@@ -8,35 +8,40 @@ Here you will find a Dockerfile for assembling a Logstash container that listens
 
 ## Pre-requisites
 
-* Docker (test with boot2docker v1.4.1)
+* Docker (test with boot2docker v1.5.0)
 * Git (optional)
 
 ## Grab it
 
 ```
-docker pull pires/logstash
+docker pull pires/docker-logstash
 ```
 
 ## Build images (optional)
 
-Providing your own version of [the image automatically built for Logstash](https://registry.hub.docker.com/u/pires/logstash) will not be supported. This is an *optional* step. You have been warned.
+Providing your own version of [the image automatically built for Logstash](https://registry.hub.docker.com/u/pires/docker-logstash) will not be supported. This is an *optional* step. You have been warned.
 
 ### Clone repository
 
 ```
-git clone https://github.com/pires/logstash.git
-cd logstash
+git clone https://github.com/pires/docker-logstash.git
+cd docker-logstash
 ```
 
 ### Assemble container
 
 ```
-docker build -t pires/logstash:latest .
+docker build -t pires/docker-logstash:latest .
 ```
 
 ## SSL keys
 
-In case you wonder how I've generated current keys:
+[Since ```logstash-forwarder``` 0.4](http://www.elasticsearch.org/blog/logstash-forwarder-0-4-0-released/), you'll need to provide valid SSL certificates.
+> * SSLv3 is no longer supported; TLS 1.0+ is required (compatible with Logstash 1.4.2+).
+> * SSL certificates now require a matching hostname or IP SAN for the server.
+
+Be sure to provide them in a Docker volume mounted at ```/certs```.
 ```
-openssl req -x509 -batch -nodes -newkey rsa:2048 -keyout logstash-forwarder.key -out logstash-forwarder.crt -days 3650
+logstash-forwarder.crt
+logstash-forwarder.key
 ```

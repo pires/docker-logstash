@@ -26,8 +26,7 @@ RUN \
 ADD logstash.conf /logstash/conf/logstash.conf
 
 # Certificates for logstash-forwarders
-ADD certs/logstash-forwarder.crt /logstash/certs/logstash-forwarder.crt
-ADD certs/logstash-forwarder.key /logstash/certs/logstash-forwarder.key
+VOLUME ["/certs"]
 
 # runnable scripts
 ADD run-logstash.sh /etc/service/logstash/run
