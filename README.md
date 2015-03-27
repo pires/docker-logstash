@@ -4,8 +4,6 @@ Logstash listening for Lumberjack protocol container made easy.
 
 Here you will find a Dockerfile for assembling a Logstash container that listens over secure Lumberjack protocol. I made this so that I could [easily cluster ELK on top of Kubernetes](https://github.com/pires/kubernetes-elk-cluster).
 
-[runit](http://smarden.org/runit/) will make sure that your service runs on container start-up and supervises it. In case the service dies, ```runit``` brings it back to life. Cool, ain't it?
-
 ## Pre-requisites
 
 * Docker (test with boot2docker v1.5.0)
@@ -31,7 +29,7 @@ cd docker-logstash
 ### Assemble container
 
 ```
-docker build -t pires/docker-logstash:latest .
+docker build -t pires/docker-logstash .
 ```
 
 ## SSL keys
