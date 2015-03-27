@@ -37,4 +37,4 @@ ADD logstash.conf /logstash/conf/logstash.conf
 # Certificates for logstash-forwarders
 VOLUME ["/certs"]
 
-CMD ["/logstash/bin/logstash",  "-f", "/logstash/conf/logstash.conf"]
+CMD ["/logstash/bin/logstash", "--quiet",  "-f", "/logstash/conf/logstash.conf"]
