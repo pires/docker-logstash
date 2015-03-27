@@ -6,8 +6,8 @@ EXPOSE 5043
 
 ENV LOGSTASH_PKG_NAME logstash-1.5.0.rc2
 
-# Udate wget to support SSL
-RUN opkg-install wget
+# Add bash cause Logstash needs it & Update wget to support SSL
+RUN opkg-install bash wget
 
 # Get and install JRE 8 Updated 40
 RUN \
