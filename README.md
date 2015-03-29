@@ -1,35 +1,34 @@
 
 # logstash
-Logstash listening for Lumberjack protocol container made easy.
+Lean (314MB) and highly configurable Logstash Docker image, based on `progrium/busybox`.
 
-Here you will find a Dockerfile for assembling a Logstash container that listens over secure Lumberjack protocol. I made this so that I could [easily cluster ELK on top of Kubernetes](https://github.com/pires/kubernetes-elk-cluster).
+## Current software
+
+* Oracle JRE 8 Update 40
+* Logstash 1.5.0 RC2
 
 ## Pre-requisites
 
-* Docker (test with boot2docker v1.5.0)
-* Git (optional)
-
-## Grab it
-
-```
-docker pull pires/docker-logstash
-```
+* Docker 1.5.0+ (tested with boot2docker)
 
 ## Build images (optional)
 
 Providing your own version of [the image automatically built for Logstash](https://registry.hub.docker.com/u/pires/docker-logstash) will not be supported. This is an *optional* step. You have been warned.
 
-### Clone repository
-
 ```
 git clone https://github.com/pires/docker-logstash.git
 cd docker-logstash
-```
-
-### Assemble container
-
-```
 docker build -t pires/docker-logstash .
+```
+
+## Run
+
+You need a folder named `config` with your own version of `logstash.conf` mounted as `/logstash/config`.
+
+I made this so that I could [easily cluster ELK on top of Kubernetes](https://github.com/pires/kubernetes-elk-cluster), and so, by default it will be listening for the Lumberjack protocol with certificates provisioned in a mounted directory, `/logstash/certs`.
+
+```
+docker run --rm -v conf:/logstash/config pires/docker-logstash
 ```
 
 ## SSL keys
@@ -38,7 +37,7 @@ docker build -t pires/docker-logstash .
 > * SSLv3 is no longer supported; TLS 1.0+ is required (compatible with Logstash 1.4.2+).
 > * SSL certificates now require a matching hostname or IP SAN for the server.
 
-Be sure to provide them in a Docker volume mounted at ```/certs```.
+Be sure to provide them in a Docker volume mounted at ```/logstash/certs```.
 ```
 logstash-forwarder.crt
 logstash-forwarder.key
