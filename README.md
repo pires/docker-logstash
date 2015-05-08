@@ -5,7 +5,7 @@ Lean (314MB) and highly configurable Logstash Docker image, based on `progrium/b
 ## Current software
 
 * Oracle JRE 8 Update 45
-* Logstash 1.5.0 RC3
+* Logstash 1.5.0 RC4
 
 ## Pre-requisites
 
