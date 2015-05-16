@@ -4,7 +4,7 @@ MAINTAINER pjpires@gmail.com
 # Export Lumberjack
 EXPOSE 5043
 
-ENV LOGSTASH_PKG_NAME logstash-1.5.0.rc4
+ENV LOGSTASH_PKG_NAME logstash-1.5.0
 
 # Add stuff
 RUN opkg-install bash

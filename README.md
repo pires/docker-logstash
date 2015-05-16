@@ -9,7 +9,7 @@ I made this so that I could [easily cluster ELK on top of Kubernetes](https://gi
 ## Current software
 
 * Oracle JRE 8 Update 45
-* Logstash 1.5.0 RC4
+* Logstash 1.5.0
 
 ## Pre-requisites
 
