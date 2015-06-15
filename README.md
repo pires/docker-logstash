@@ -17,17 +17,21 @@ I made this so that I could [easily cluster ELK on top of Kubernetes](https://gi
 
 ## Run
 
+Assuming:
 * `/logstash/config` - where `logstash` will look for `logstash.conf` file
 * `/logstash/certs` - where `logstash` will look for certificate files to be used with `lumberjack`
 
+
+Run:
+
 ```
-docker run --name logstash -p 5043:5043 -v conf:/logstash/config quay.io/pires/docker-logstash:0.2
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.0
 ```
 
 or 
 
 ```
-docker run --name logstash -p 5043:5043 -v /home/pires/logstash-config:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:0.2
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.0
 ```
 
 ## SSL keys
