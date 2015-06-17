@@ -9,7 +9,7 @@ I made this so that I could [easily cluster ELK on top of Kubernetes](https://gi
 ## Current software
 
 * Oracle JRE 8 Update 45
-* Logstash 1.5.0
+* Logstash 1.5.1
 
 ## Pre-requisites
 
@@ -25,13 +25,13 @@ Assuming:
 Run:
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.0
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.1
 ```
 
 or 
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.0
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.1
 ```
 
 ## SSL keys
