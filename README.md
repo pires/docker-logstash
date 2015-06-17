@@ -1,6 +1,6 @@
 
 # docker-logstash
-Lean (307MB) and highly configurable Logstash Docker image, based on `progrium/busybox`.
+Lean (308MB) and highly configurable Logstash Docker image, based on `progrium/busybox`.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/pires/docker-logstash/status "Docker Repository on Quay.io")](https://quay.io/repository/pires/docker-logstash)
 
