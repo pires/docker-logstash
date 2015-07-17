@@ -1,6 +1,6 @@
 
 # docker-logstash
-Lean (308MB) and highly configurable Logstash Docker image, based on `progrium/busybox`.
+Lean (314MB) and highly configurable Logstash Docker image, based on `gliderlabs/alpine`.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/pires/docker-logstash/status "Docker Repository on Quay.io")](https://quay.io/repository/pires/docker-logstash)
 
@@ -8,8 +8,8 @@ I made this so that I could [easily cluster ELK on top of Kubernetes](https://gi
 
 ## Current software
 
-* Oracle JRE 8 Update 45
-* Logstash 1.5.1
+* Oracle JRE 8 Update 51
+* Logstash 1.5.2
 
 ## Pre-requisites
 
@@ -25,13 +25,13 @@ Assuming:
 Run:
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.1
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.2
 ```
 
 or 
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.1
+docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.2
 ```
 
 ## SSL keys
