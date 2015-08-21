@@ -4,7 +4,7 @@ MAINTAINER pjpires@gmail.com
 # Export Lumberjack
 EXPOSE 5043
 
-ENV LOGSTASH_PKG_NAME logstash-1.5.3
+ENV LOGSTASH_PKG_NAME logstash-1.5.4
 
 # Add stuff
 RUN apk add --update curl bash ca-certificates

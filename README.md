@@ -9,11 +9,11 @@ I made this so that I could [easily cluster ELK on top of Kubernetes](https://gi
 ## Current software
 
 * Oracle JRE 8 Update 51
-* Logstash 1.5.3
+* Logstash 1.5.4
 
 ## Pre-requisites
 
-* Docker 1.5.0+
+* Docker 1.7.0+
 
 ## Run
 
@@ -21,17 +21,25 @@ Assuming:
 * `/logstash/config` - where `logstash` will look for `logstash.conf` file
 * `/logstash/certs` - where `logstash` will look for certificate files to be used with `lumberjack`
 
-
 Run:
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config quay.io/pires/docker-logstash:1.5.3
+docker run --name logstash \
+	--detach \
+	-p 5043:5043 \
+	--volume /home/pires/logstash:/logstash/config \
+	quay.io/pires/docker-logstash:1.5.4
 ```
 
 or 
 
 ```
-docker run --name logstash -d -p 5043:5043 -v /home/pires/logstash:/logstash/config -v /home/pires/logstash-certs:/logstash/certs quay.io/pires/docker-logstash:1.5.3
+docker run --name logstash \
+	--detach \
+	-p 5043:5043 \
+	--volume /home/pires/logstash:/logstash/config \
+	--volume /home/pires/logstash-certs:/logstash/certs \
+	quay.io/pires/docker-logstash:1.5.4
 ```
 
 ## SSL keys
