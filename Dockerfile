@@ -1,4 +1,4 @@
-FROM quay.io/pires/docker-jre:8u51
+FROM quay.io/pires/docker-jre:8u60
 MAINTAINER pjpires@gmail.com
 
 # Export Lumberjack
