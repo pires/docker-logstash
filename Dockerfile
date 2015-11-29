@@ -1,15 +1,10 @@
-FROM quay.io/pires/docker-jre:8u60
+FROM quay.io/pires/docker-jre:8u66
 MAINTAINER pjpires@gmail.com
 
-# Export Lumberjack
-EXPOSE 5043
-
-ENV LOGSTASH_PKG_NAME logstash-1.5.4
-
-# Add stuff
-RUN apk add --update curl bash ca-certificates
+ENV LOGSTASH_PKG_NAME logstash-2.1.0
 
 # Install Logstash
+RUN apk add --update curl bash ca-certificates
 RUN \
   ( curl -Lskj http://download.elastic.co/logstash/logstash/$LOGSTASH_PKG_NAME.tar.gz | \
   gunzip -c - | tar xf - ) && \
@@ -20,7 +15,7 @@ RUN \
 # Logstash config
 VOLUME ["/logstash/config"]
 
-# Optional certificates folder for logstash-forwarder
+# Optional certificates folder
 VOLUME ["/logstash/certs"]
 
 CMD ["/logstash/bin/logstash", "--quiet",  "-f", "/logstash/config/logstash.conf"]
