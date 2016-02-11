@@ -1,13 +1,13 @@
 
 # docker-logstash
-Lean (300MB) and highly configurable Logstash Docker image, based on `gliderlabs/alpine`.
+Lean (311MB) and highly configurable Logstash Docker image, based on `gliderlabs/alpine`.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/pires/docker-logstash/status "Docker Repository on Quay.io")](https://quay.io/repository/pires/docker-logstash)
 
 ## Current software
 
-* Oracle JRE 8 Update 66
-* Logstash 2.1.0
+* Oracle JRE 8 Update 74
+* Logstash 2.2.0
 
 ## Run
 
@@ -21,7 +21,7 @@ Run:
 docker run --name logstash \
 	--detach \
 	--volume /home/pires/logstash:/logstash/config \
-	quay.io/pires/docker-logstash:2.1.0
+	quay.io/pires/docker-logstash:2.2.0
 ```
 
 or 
@@ -31,5 +31,5 @@ docker run --name logstash \
 	--detach \
 	--volume /home/pires/logstash:/logstash/config \
 	--volume /home/pires/logstash-certs:/logstash/certs \
-	quay.io/pires/docker-logstash:2.1.0
+	quay.io/pires/docker-logstash:2.2.0
 ```
