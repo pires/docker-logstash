@@ -1,7 +1,7 @@
 FROM quay.io/pires/docker-jre:8u72
 MAINTAINER pjpires@gmail.com
 
-ENV LOGSTASH_PKG_NAME logstash-2.2.0
+ENV LOGSTASH_PKG_NAME logstash-2.2.2
 
 # Install Logstash
 RUN apk add --update curl bash ca-certificates
