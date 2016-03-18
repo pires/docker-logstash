@@ -1,4 +1,4 @@
-FROM quay.io/pires/docker-jre:8u74-dns
+FROM quay.io/pires/docker-jre:8u72
 MAINTAINER pjpires@gmail.com
 
 ENV LOGSTASH_PKG_NAME logstash-2.2.0

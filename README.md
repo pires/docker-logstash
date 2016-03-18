@@ -1,12 +1,12 @@
 
 # docker-logstash
-Lean (311MB) and highly configurable Logstash Docker image, based on `gliderlabs/alpine`.
+Lean (254MB) and highly configurable Logstash Docker image, based on `alpine:edge` and OpenJDK.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/pires/docker-logstash/status "Docker Repository on Quay.io")](https://quay.io/repository/pires/docker-logstash)
 
 ## Current software
 
-* Oracle JRE 8 Update 74
+* [OpenJDK 8u72](http://openjdk.java.net/projects/jdk8u/releases/8u72.html)
 * Logstash 2.2.0
 
 ## Run
