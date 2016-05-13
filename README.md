@@ -1,6 +1,6 @@
 
 # docker-logstash
-Lean (254MB) and highly configurable Logstash Docker image, based on `alpine:edge` and OpenJDK.
+Lean (255MB) and highly configurable Logstash Docker image, based on `alpine:edge` and OpenJDK.
 
 [![Docker Repository on Quay.io](https://quay.io/repository/pires/docker-logstash/status "Docker Repository on Quay.io")](https://quay.io/repository/pires/docker-logstash)
 
