@@ -6,8 +6,8 @@ Lean (254MB) and highly configurable Logstash Docker image, based on `alpine:edg
 
 ## Current software
 
-* [OpenJDK 8u72](http://openjdk.java.net/projects/jdk8u/releases/8u72.html)
-* Logstash 2.2.2
+* [OpenJDK 8u92](http://openjdk.java.net/projects/jdk8u/releases/8u92.html)
+* Logstash 2.3.2
 
 ## Run
 
@@ -21,7 +21,7 @@ Run:
 docker run --name logstash \
 	--detach \
 	--volume /home/pires/logstash:/logstash/config \
-	quay.io/pires/docker-logstash:2.2.2
+	quay.io/pires/docker-logstash:2.3.2
 ```
 
 or 
@@ -31,5 +31,5 @@ docker run --name logstash \
 	--detach \
 	--volume /home/pires/logstash:/logstash/config \
 	--volume /home/pires/logstash-certs:/logstash/certs \
-	quay.io/pires/docker-logstash:2.2.2
+	quay.io/pires/docker-logstash:2.3.2
 ```
